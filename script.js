@@ -1,22 +1,18 @@
-'use strict'
-let user = {
-    "Вопрос1": "Криштиану",
-    "Вопрос2": "Бразилия",
-}
-let z = 0;
-let x = prompt ("Напиши имя Роналду (Португалия)", "");
-if (x == user["Вопрос1"]) {
-    alert ("Красавчик");
-    z++;
-} else {
-    alert ("Далбаеб")
-};
-let y = prompt ("В какой сборной играет Неймар?", "");
-if (y == user["Вопрос2"]) {
-    alert ("Красавчик");
-    z++;
-} else {
-    alert ("Далбаеб")
-}
-alert ("Ты прошел испытание со счетом " + z + " из 2");
-alert ("Правильные ответы были: " + user["Вопрос1"] + ", " + user["Вопрос2"]);
+"use strict";
+
+let calculator = {
+    read () {
+        this.first = +prompt('first', "");
+        this.second = +prompt('second', "");
+    },
+    sum () {
+        return this.first + this.second;
+    },
+    mul () {
+        return this.first * this.second;
+    }
+  };
+
+  calculator.read();
+  alert( calculator.sum() );
+  alert( calculator.mul() );
